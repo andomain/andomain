@@ -1,0 +1,26 @@
+$main: #252525;
+$highlight: #ff0000;
+$link: #af0404;
+$neutral: #414141;
+
+body {
+    color: $main;
+}
+
+a {
+    color: $link;
+    transition: color 0.25s linear;
+
+    &:hover {
+        color: $highlight;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $neutral;
+    margin: 0;
+}
