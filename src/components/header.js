@@ -5,6 +5,7 @@ import { rhythm, scale } from "../utils/typography"
 
 const HeaderContainer = styled.header`
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: ${rhythm(1.5)};
 `;
 
@@ -20,18 +21,20 @@ const LinkContainer = styled.nav`
         align-items: center;
         margin: 0 ${rhythm(.5)} 0 0;
     }
+
+    @media(max-width: ${props => props.theme.mobileBreakpoint}px) {
+        justify-content: space-around;
+
+        a {
+            margin: 0;
+        }
+    }
 `;
 
 const Header = ({ title }) => {
-
     return (
-
         <HeaderContainer>
-            <h1
-                style={{
-                    ...scale(1.5),
-                }}
-            >
+            <h1 style={{ ...scale(1.5) }}>
                 <Link
                     style={{
                         boxShadow: `none`,
