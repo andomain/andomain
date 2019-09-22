@@ -26,6 +26,7 @@ const Bio = () => {
           author
           social {
             twitter
+            github
           }
         }
       }
@@ -37,7 +38,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(1),
       }}
     >
       <Image
@@ -54,8 +55,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        Personal website of Sam Anderson, Fullstack web developer specializing in building nice things for nice people.
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter
