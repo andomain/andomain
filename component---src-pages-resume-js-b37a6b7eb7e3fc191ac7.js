@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{236:function(t,e,o){"use strict";o.r(e);var r=o(0),n=o.n(r),p=o(230);var a=function(t){var e,o;function r(){return t.apply(this,arguments)||this}return o=t,(e=r).prototype=Object.create(o.prototype),e.prototype.constructor=e,e.__proto__=o,r.prototype.render=function(){return n.a.createElement(p.a,{pageTitle:"Resume"},"My Resume")},r}(n.a.Component);e.default=a}}]);
+//# sourceMappingURL=component---src-pages-resume-js-b37a6b7eb7e3fc191ac7.js.map

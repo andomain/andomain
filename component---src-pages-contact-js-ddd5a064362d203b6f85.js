@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{234:function(t,e,o){"use strict";o.r(e);var n=o(0),r=o.n(n),p=o(230);o(110);var a=function(t){var e,o;function n(){return t.apply(this,arguments)||this}return o=t,(e=n).prototype=Object.create(o.prototype),e.prototype.constructor=e,e.__proto__=o,n.prototype.render=function(){return r.a.createElement(p.a,{pageTitle:"Contact"},"Contact me")},n}(r.a.Component);e.default=a}}]);
+//# sourceMappingURL=component---src-pages-contact-js-ddd5a064362d203b6f85.js.map
