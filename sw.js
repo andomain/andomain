@@ -27,10 +27,10 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-3b50e363a751bd0d437e.js"
+    "url": "webpack-runtime-e0228f4cf5fb5a6d8a6e.js"
   },
   {
-    "url": "styles.9c3e68b29737a674fd09.css"
+    "url": "styles.28a267ccc67738eb20be.css"
   },
   {
     "url": "styles-407fe62976dc5310c43e.js"
@@ -39,29 +39,21 @@ self.__precacheManifest = [
     "url": "framework-741ade27086b2708e961.js"
   },
   {
-    "url": "app-64a31ee81513c4dc8046.js"
+    "url": "app-caeccca6a63c0d3b02eb.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "2c5076c185ced0d53f370b7c2f9a41df"
+    "revision": "38052c32010a84524bd7e197e87c45bf"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b0556ce5127c1a3e2490.js"
-  },
-  {
-    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f6081b83111aea4128c98944b7fafccc"
-  },
-  {
-    "url": "page-data/app-data.json",
-    "revision": "47c1bf54d9555a84aa6cd63172a81f98"
   },
   {
     "url": "polyfill-f33cc994945b2249d5ee.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "b73c438a90e75deee9fcde8bb9908dcf"
+    "revision": "27cc4f8d0a85bf9f37be429d7a55e230"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -148,12 +140,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/andomain`), ``)
+  pathname = pathname.replace(new RegExp(`^`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/andomain/app-64a31ee81513c4dc8046.js`))) {
+  if (!resources || !(await caches.match(`/app-caeccca6a63c0d3b02eb.js`))) {
     return await fetch(event.request)
   }
 
@@ -166,7 +158,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/andomain/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
