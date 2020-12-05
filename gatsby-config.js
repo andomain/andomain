@@ -1,5 +1,4 @@
 module.exports = {
-    pathPrefix: "/andomain",
     siteMetadata: {
         title: `Andomain`,
         author: `Sam Anderson`,
