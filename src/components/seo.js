@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
 
 function SEO({ pageTitle, description, lang, meta, title, author }) {
     return (
@@ -52,7 +52,7 @@ function SEO({ pageTitle, description, lang, meta, title, author }) {
                 },
             ].concat(meta)}
         />
-    )
+    );
 }
 
 SEO.defaultProps = {
@@ -60,7 +60,7 @@ SEO.defaultProps = {
     meta: [],
     description: ``,
     author: ``,
-}
+};
 
 SEO.propTypes = {
     description: PropTypes.string,
@@ -68,6 +68,6 @@ SEO.propTypes = {
     meta: PropTypes.arrayOf(PropTypes.object),
     title: PropTypes.string.isRequired,
     author: PropTypes.string,
-}
+};
 
-export default SEO
+export default SEO;

@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from 'styled-components';
-import { rhythm, scale } from "../utils/typography"
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import { rhythm, scale } from "../utils/typography";
 
 const HeaderContainer = styled.header`
     display: flex;
@@ -13,16 +13,16 @@ const LinkContainer = styled.nav`
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    margin: 0 ${rhythm(.5)};
+    margin: 0 ${rhythm(0.5)};
     list-style: none;
 
     a {
         display: flex;
         align-items: center;
-        margin: 0 ${rhythm(.5)} 0 0;
+        margin: 0 ${rhythm(0.5)} 0 0;
     }
 
-    @media(max-width: ${props => props.theme.mobileBreakpoint}px) {
+    @media (max-width: ${props => props.theme.mobileBreakpoint}px) {
         justify-content: space-around;
 
         a {
@@ -49,10 +49,9 @@ const Header = ({ title }) => {
             <LinkContainer>
                 <Link to={`/`}>Blog</Link>
                 <Link to={`/contact`}>Contact</Link>
-                <Link to={`/resume`}>Resume</Link>
             </LinkContainer>
         </HeaderContainer>
     );
-}
+};
 
 export default Header;

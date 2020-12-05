@@ -1,42 +1,42 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 // import Image from "gatsby-image";
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../utils/typography";
 
 const BioContainer = styled.div`
     display: flex;
-    marginBottom: rhythm(1);
+    marginbottom: rhythm(1);
 
-    @media(max-width: ${props => props.theme.mobileBreakpoint}px) {
+    @media (max-width: ${props => props.theme.mobileBreakpoint}px) {
         flex-direction: column;
     }
 `;
 
 const Bio = () => {
     const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
+        query BioQuery {
+            avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+                childImageSharp {
+                    fixed(width: 50, height: 50) {
+                        ...GatsbyImageSharpFixed
+                    }
+                }
+            }
+            site {
+                siteMetadata {
+                    author
+                    social {
+                        twitter
+                        github
+                    }
+                }
+            }
         }
-      }
-      site {
-        siteMetadata {
-          author
-          social {
-            twitter
-            github
-          }
-        }
-      }
-    }
-  `)
+    `);
 
-    const { author, social } = data.site.siteMetadata
+    const { author, social } = data.site.siteMetadata;
     return (
         <BioContainer>
             {/* <Image
@@ -53,10 +53,11 @@ const Bio = () => {
                 }}
             /> */}
             <p>
-                I'm Sam Anderson, a Fullstack web developer specializing in building nice things for nice people. I'm currently  based in Sheffield working at <a href="https://joipolloi.com/">Joi Polloi</a>.
+                I'm Sam Anderson, a software developer based in Sheffield, UK
+                specializing in building nice things for nice people.
             </p>
         </BioContainer>
-    )
-}
+    );
+};
 
-export default Bio
+export default Bio;
